@@ -1,0 +1,29 @@
+{
+  "name": "inctech",
+  "version": "1.0.0",
+  "description": "インクライン株式会社ウェブサイトクローン",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EFS10110/inctech.git"
+  },
+  "keywords": [
+    "inkline",
+    "construction",
+    "surveying",
+    "website"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EFS10110/inctech/issues"
+  },
+  "homepage": "https://github.com/EFS10110/inctech#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

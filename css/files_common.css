@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* Files Common Styles */
+.files_common {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Image Styles */
+.img_box {
+    margin-bottom: 15px;
+}
+.img_box img {
+    max-width: 100%;
+    height: auto;
+}
+.eyecatch {
+    margin-bottom: 10px;
+}
+
+/* Field Styles */
+.field_2col {
+    width: 48%;
+    float: left;
+}
+.field_2col img {
+    max-width: 100%;
+    height: auto;
+}
+.field_text {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Sub Post */
+.sub_post {
+    margin-bottom: 15px;
+}
+
+/* Entry Post */
+.entry_post {
+    margin-bottom: 20px;
+}
+
+/* Post Data */
+.post_data {
+    margin-bottom: 15px;
+}
+.post_data p {
+    margin-bottom: 0.5em;
+}

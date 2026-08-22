@@ -173,7 +173,6 @@ body {
 }
 
 /* ===== Nav Cards (mobile only) ===== */
-#mobile-nav-cards { display: none; }
 #mobile-nav-cards {
     max-width: 940px;
     margin: 0 auto;
@@ -333,6 +332,18 @@ body {
 .field_2col img { max-width: 100%; height: auto; }
 .field_text { margin-top: 5px; font-size: 12px; color: #666; }
 .padding-right_20 { padding-right: 20px; }
+
+
+/* Content text - no background */
+.post_data {
+    background: transparent;
+}
+.easys_content {
+    background: transparent;
+}
+.b_01, .b_02, .z_h1, .z_g1, .z_a1, .z_c1, .h_04, .e_03 {
+    background: transparent;
+}
 
 /* Entry Post */
 .entry_post { margin-bottom: 20px; }

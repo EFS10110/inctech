@@ -172,7 +172,8 @@ body {
     position: relative;
 }
 
-/* ===== Nav Cards (index.html only) ===== */
+/* ===== Nav Cards (mobile only) ===== */
+#mobile-nav-cards { display: none; }
 #mobile-nav-cards {
     max-width: 940px;
     margin: 0 auto;
@@ -540,6 +541,26 @@ a:hover { color: #005299; }
         font-size: 10px;
     }
     
+    
+    /* Hide sidebar on mobile */
+    #secondary, .sidebar-box {
+        display: none;
+    }
+    #container_top {
+        width: 100%;
+        float: none;
+    }
+    #content {
+        width: 100%;
+        float: none;
+        padding: 0 10px;
+    }
+    /* Show nav cards on mobile */
+    #mobile-nav-cards {
+        display: block;
+        padding: 15px 10px;
+    }
+
     /* Slider full width */
     .top_slider {
         margin-left: 0;

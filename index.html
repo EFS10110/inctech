@@ -64,8 +64,8 @@
 <div id="jquery_slider_pc" class="top_slider slider_6 post content_area">
 <div class="entry_post entry_post_99">
 <div class="viewer viewer_99 select_99">
-<img src="images/slider1.jpg" alt="昼写真" width="1500" height="890" />
-<img src="images/slider2.jpg" alt="夜写真" width="1500" height="890" />
+<img src="images/slider1.jpg" alt="昼写真" width="1500" />
+<img src="images/slider2.jpg" alt="夜写真" width="1500" />
 </div>
 <script type="text/javascript">
 $(function(){
@@ -87,7 +87,7 @@ setCenter(".viewer_99 img");
 $(window).resize(function(){ setCenter(".viewer_99 img"); });
 </script>
 <style type="text/css">
-.viewer_99 { margin: 0 auto; width: 100%; height: 890px; text-align: left; overflow: hidden; position: relative; }
+.viewer_99 { margin: 0 auto; width: 100%; height: auto; max-height: 500px; text-align: left; overflow: hidden; position: relative; }
 .viewer_99 img { position: absolute; }
 </style>
 </div>
@@ -209,35 +209,18 @@ $(window).resize(function(){ setCenter(".viewer_99 img"); });
 <div id="footer_block">
 <div id="footer_box">
 <div id="footer_sitemap_block">
-<div id="footer-widget-area" role="complementary">
-<div id="first" class="widget-area">
-<ul class="xoxo">
-<div class="menu-header">
-<ul id="menu-footer_navi" class="menu">
-<li><a href="index.html">トピックス</a></li>
-<li><a href="news.html">ニュース</a></li>
-<li><a href="contents.html">事業内容</a></li>
-<li><a href="company.html">会社概要</a></li>
-<li><a href="recruit.html">採用情報</a></li>
-<li><a href="contact.html">お問い合わせ</a></li>
+<ul class="footer-nav-mobile">
+<li><a href="index.html">トピックス <span>&#9654;</span></a></li>
+<li><a href="company.html">会社概要 <span>&#9654;</span></a></li>
+<li><a href="contents.html">事業内容 <span>&#9654;</span></a></li>
+<li><a href="news.html">ニュース <span>&#9654;</span></a></li>
+<li><a href="recruit.html">採用情報 <span>&#9654;</span></a></li>
+<li><a href="contact.html">お問い合わせ <span>&#9654;</span></a></li>
 </ul>
 </div>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="footer_infomation">
-<div id="footer_information" class="post">
-<div class="entry-post">
-<div class="post-data"></div>
-</div>
-<div class="clear_float"></div>
-</div>
-</div>
-</div><!-- footer_box -->
-
 <address id="copyright">Copyright (C) 株式会社インクテック All Rights Reserved.</address>
+</div>
+</div>
 </div><!-- footer_block -->
 
 </div><!-- wrapper -->

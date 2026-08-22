@@ -221,97 +221,19 @@
 <div id="footer_block">
 <div id="footer_box">
 <div id="footer_sitemap_block">
-<div id="footer-widget-area" role="complementary">
-<div id="first" class="widget-area">
-<ul class="xoxo">
-<div class="menu-header">
-<ul id="menu-footer_navi" class="menu">
-<li><a href="index.html">トピックス</a></li>
-<li class="current-menu-item page_item page-item-124 current_page_item"><a href="news.html">ニュース</a></li>
-<li><a href="contents.html">事業内容</a></li>
-<li><a href="company.html">会社概要</a></li>
-<li><a href="recruit.html">採用情報</a></li>
-<li><a href="contact.html">お問い合わせ</a></li>
+<ul class="footer-nav-mobile">
+<li><a href="index.html">トピックス <span>&#9654;</span></a></li>
+<li><a href="company.html">会社概要 <span>&#9654;</span></a></li>
+<li><a href="contents.html">事業内容 <span>&#9654;</span></a></li>
+<li><a href="news.html">ニュース <span>&#9654;</span></a></li>
+<li><a href="recruit.html">採用情報 <span>&#9654;</span></a></li>
+<li><a href="contact.html">お問い合わせ <span>&#9654;</span></a></li>
 </ul>
 </div>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="footer_infomation">
-<div id="footer_information" class="post">
-<div class="entry-post">
-<div class="post-data"></div>
-</div>
-<div class="clear_float"></div>
-</div>
-</div>
-</div>
-
 <address id="copyright">Copyright (C) 株式会社インクテック All Rights Reserved.</address>
 </div>
+</div>
+</div><!-- footer_block -->
 
-</div><!-- wrapper -->
-
-<script type="text/javascript">
-jQuery(function($) {
-    var header = $('#branding_box');
-    var nav = $('#secondary');
-    var offset = 0;
-    
-    // Fixed header with logo
-    $(window).on('load resize', function(){ 
-        offset = header.offset(); 
-    });
-    $(window).scroll(function() {
-        if($(window).scrollTop() > offset.top) {
-            header.addClass('fixed');
-        } else {
-            header.removeClass('fixed');
-        }
-    });
-    
-    // Fixed sidebar
-    if(nav.length) {
-        var navOffset = 0;
-        $(window).on('load resize', function(){ navOffset = nav.offset(); });
-        $(window).scroll(function() {
-            nav.removeClass('fixed');
-            nav.removeClass('fix_under');
-            var underLimit = $('html').height() - ($('#footer_block').height() + nav.height() + 30);
-            if($('#content').height() > $('.sidebar-box').height()){
-                if( $(window).scrollTop() >= underLimit - 100 ){
-                    nav.addClass('fix_under');
-                    nav.css({'top': underLimit});
-                } else if($(window).scrollTop() > navOffset.top - 100 ) {
-                    nav.addClass('fixed');
-                    nav.css({'top': '60px'});
-                }
-            }
-        });
-    }
-});
-</script>
-<script type="text/javascript">
-// Mobile menu toggle
-jQuery(function($) {
-    $('#menu-toggle').on('click', function(e) {
-        e.preventDefault();
-        $('#access').toggleClass('mobile-open');
-    });
-    
-    // Close menu when clicking a link
-    $('#access a').on('click', function() {
-        $('#access').removeClass('mobile-open');
-    });
-    
-    // Smooth scroll for TOP button
-    $('#page-top').on('click', function(e) {
-        e.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, 300);
-    });
-});
-</script>
 </body>
 </html>

@@ -29,6 +29,7 @@
 <body id="page_12" class="blog">
 
 <div id="wrapper">
+<div id="top"></div>
 
 <div id="branding_box">
 
@@ -210,6 +211,26 @@ jQuery(function($) {
             }
         });
     }
+});
+</script>
+<script type="text/javascript">
+// Mobile menu toggle
+jQuery(function($) {
+    $('#menu-toggle').on('click', function(e) {
+        e.preventDefault();
+        $('#access').toggleClass('mobile-open');
+    });
+    
+    // Close menu when clicking a link
+    $('#access a').on('click', function() {
+        $('#access').removeClass('mobile-open');
+    });
+    
+    // Smooth scroll for TOP button
+    $('#page-top').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 300);
+    });
 });
 </script>
 </body>

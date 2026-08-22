@@ -427,7 +427,163 @@ a:hover { color: #005299; }
     }
 }
 
+
+/* Mobile Menu Bar */
+#mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0068b7;
+    z-index: 10000;
+    padding: 8px 0;
+}
+.menu-btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 5px 15px;
+    line-height: 1.2;
+}
+.menu-icon {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+.menu-text {
+    font-size: 9px;
+    font-weight: bold;
+}
+.top-btn {
+    float: right;
+}
+
+/* Nav Cards */
+#mobile-nav-cards {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+.nav-card-grid {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.nav-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0068b7;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 10px;
+    border-radius: 8px;
+    text-align: center;
+    min-height: 100px;
+}
+.nav-card-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+.nav-card-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.nav-card-sub {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
 /* Responsive - Mobile */
+@media (max-width: 600px) {
+    #mobile-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Hide desktop nav on mobile */
+    #branding_box .post-data {
+        flex-direction: column;
+        align-items: center;
+    }
+    #access {
+        display: none;
+    }
+    #access.mobile-open {
+        display: block;
+        position: fixed;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 9999;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    #access.mobile-open .menu-header ul {
+        flex-direction: column;
+    }
+    #access.mobile-open a {
+        color: #333;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .site-logo img {
+        max-width: 200px;
+    }
+    
+    /* Nav cards responsive */
+    .nav-card-grid {
+        flex-direction: column;
+    }
+    .nav-card {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 15px;
+        min-height: auto;
+        gap: 15px;
+    }
+    .nav-card-icon {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+    .nav-card-label {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .nav-card-sub {
+        font-size: 12px;
+    }
+    
+    /* Slider full width */
+    .top_slider {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+    }
+    
+    #inner_block {
+        padding: 0 10px;
+    }
+    .field_2col {
+        width: 100%;
+        float: none;
+    }
+    .float_left, .float_right {
+        float: none;
+    }
+    .entry_title {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* Responsive - Mobile Original */
 @media (max-width: 600px) {
     .site-logo img {
         max-width: 200px;

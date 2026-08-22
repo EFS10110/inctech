@@ -28,8 +28,14 @@
 </head>
 
 <body id="page_6" class="blog">
+<div id="mobile-menu">
+<a href="#" id="menu-toggle" class="menu-btn"><span class="menu-icon">&#9776;</span><span class="menu-text">MENU</span></a>
+<a href="tel:0120-XXX-XXX" class="menu-btn tel-btn"><span class="menu-icon">&#9743;</span><span class="menu-text">TEL</span></a>
+<a href="#top" id="page-top" class="menu-btn top-btn"><span class="menu-icon">&#9650;</span><span class="menu-text">TOP</span></a>
+</div>
 
 <div id="wrapper">
+<div id="top"></div>
 
 <div id="branding_box">
 
@@ -88,6 +94,37 @@ $(window).resize(function(){ setCenter(".viewer_99 img"); });
 </div>
 </div>
 
+<div id="mobile-nav-cards">
+<div class="nav-card-grid">
+<a href="company.html" class="nav-card">
+<div class="nav-card-icon">&#127970;</div>
+<div class="nav-card-label">会社概要</div>
+<div class="nav-card-sub">COMPANY</div>
+</a>
+<a href="contents.html" class="nav-card">
+<div class="nav-card-icon">&#128208;</div>
+<div class="nav-card-label">事業内容</div>
+<div class="nav-card-sub">BUSINESS</div>
+</a>
+<a href="news.html" class="nav-card">
+<div class="nav-card-icon">&#128240;</div>
+<div class="nav-card-label">ニュース</div>
+<div class="nav-card-sub">NEWS</div>
+</a>
+</div>
+<div class="nav-card-grid">
+<a href="recruit.html" class="nav-card">
+<div class="nav-card-icon">&#129309;</div>
+<div class="nav-card-label">採用情報</div>
+<div class="nav-card-sub">RECRUIT</div>
+</a>
+<a href="contact.html" class="nav-card">
+<div class="nav-card-icon">&#128231;</div>
+<div class="nav-card-label">お問い合わせ</div>
+<div class="nav-card-sub">CONTACT</div>
+</a>
+</div>
+</div>
 <div id="outer_block">
 <div id="inner_block">
 
@@ -243,6 +280,26 @@ jQuery(function($) {
             }
         });
     }
+});
+</script>
+<script type="text/javascript">
+// Mobile menu toggle
+jQuery(function($) {
+    $('#menu-toggle').on('click', function(e) {
+        e.preventDefault();
+        $('#access').toggleClass('mobile-open');
+    });
+    
+    // Close menu when clicking a link
+    $('#access a').on('click', function() {
+        $('#access').removeClass('mobile-open');
+    });
+    
+    // Smooth scroll for TOP button
+    $('#page-top').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 300);
+    });
 });
 </script>
 </body>

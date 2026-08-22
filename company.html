@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=1300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
 <meta property="og:image" content="images/facebook_face.jpg">
 <title>会社概要 | インクライン株式会社</title>
@@ -31,22 +31,28 @@
 <div id="wrapper">
 
 <div id="branding_box">
+
+<h1 id="site-description"><a href="index.html" title="インクテック" rel="home">株式会社インクテック</a></h1>
+
 <div id="header_information" class="post">
 <div class="post-data">
-<div class="clear_float"></div>
-</div>
+<div class="site-logo"><a href="index.html"><img src="images/logo.png" alt="株式会社インクテック" /></a></div>
 <div id="access" role="navigation">
 <div class="menu-header">
 <ul id="menu-gnavi" class="menu">
-<li><a href="index.html">トピックス</a></li>
-<li class="current-menu-item page_item page-item-9 current_page_item"><a href="company.html">会社概要</a></li>
-<li><a href="contents.html">事業内容</a></li>
-<li><a href="news.html">ニュース</a></li>
-<li><a href="recruit.html">採用情報</a></li>
-<li><a href="contact.html">お問い合わせ</a></li>
+<li id="menu-item-6" class="gnavi11 menu-item page-item-6"><a href="index.html">トピックス</a></li>
+<li id="menu-item-9" class="gnavi12 menu-item page-item-9 current_page_item"><a href="company.html">会社概要</a></li>
+<li id="menu-item-12" class="gnavi13 menu-item page-item-12"><a href="contents.html">事業内容</a></li>
+<li id="menu-item-124" class="gnavi14 menu-item page-item-124"><a href="news.html">ニュース</a></li>
+<li id="menu-item-15" class="gnavi15 menu-item page-item-15"><a href="recruit.html">採用情報</a></li>
+<li id="menu-item-18" class="gnavi16 menu-item page-item-18"><a href="contact.html">お問い合わせ</a></li>
 </ul>
 </div>
+</div><!-- #access -->
+<div class="clear_float"></div>
 </div>
+</div><!-- #header_information -->
+
 </div><!-- #branding_box -->
 
 <div id="main_teaser" class="entry_teaser_9"></div>
@@ -264,46 +270,42 @@
 
 <script type="text/javascript">
 jQuery(function($) {
+    var header = $('#branding_box');
     var nav = $('#secondary');
     var offset = 0;
-    var footer = $('#footer_block');
-    if(!$('.fixed').length){ offset = nav.offset(); }
-    $(window).on('load resize', function(){ resetOffset(); });
-    $(window).scroll(resetOffset);
-    function resetOffset(){
-        nav.removeClass('fixed');
-        nav.removeClass('fix_under');
-        offset = nav.offset();
-        var underLimit = $('html').height() - ($('#footer_block').height() + nav.height() + 30);
-        if($('#content').height() > $('.sidebar-box').height()){
-            if( $(window).scrollTop() >= underLimit - 100 ){
-                nav.addClass('fix_under');
-                nav.removeClass('fixed');
-                nav.css({'top': underLimit});
-            } else if($(window).scrollTop() > offset.top - 100 ) {
-                nav.addClass('fixed');
-                nav.removeClass('fix_under');
-                nav.css({'top': '120px'});
+    
+    // Fixed header with logo
+    $(window).on('load resize', function(){ 
+        offset = header.offset(); 
+    });
+    $(window).scroll(function() {
+        if($(window).scrollTop() > offset.top) {
+            header.addClass('fixed');
+        } else {
+            header.removeClass('fixed');
+        }
+    });
+    
+    // Fixed sidebar
+    if(nav.length) {
+        var navOffset = 0;
+        $(window).on('load resize', function(){ navOffset = nav.offset(); });
+        $(window).scroll(function() {
+            nav.removeClass('fixed');
+            nav.removeClass('fix_under');
+            var underLimit = $('html').height() - ($('#footer_block').height() + nav.height() + 30);
+            if($('#content').height() > $('.sidebar-box').height()){
+                if( $(window).scrollTop() >= underLimit - 100 ){
+                    nav.addClass('fix_under');
+                    nav.css({'top': underLimit});
+                } else if($(window).scrollTop() > navOffset.top - 100 ) {
+                    nav.addClass('fixed');
+                    nav.css({'top': '60px'});
+                }
             }
-        }
-    }
-});
-
-jQuery(function($) {
-    var nav1 = $('#access');
-    var offset1 = 0;
-    if(!$('.fixed').length){ offset1 = nav1.offset(); }
-    $(window).on('load resize', function(){ resetOffset1(); });
-    $(window).scroll(resetOffset1);
-    function resetOffset1(){
-        nav1.removeClass('fixed');
-        offset1 = nav1.offset();
-        if($(window).scrollTop() > offset1.top) {
-            nav1.addClass('fixed');
-        }
+        });
     }
 });
 </script>
-
 </body>
 </html>

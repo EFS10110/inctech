@@ -348,17 +348,6 @@ body {
 .padding-right_20 { padding-right: 20px; }
 
 
-/* Content text - no background */
-.post_data,
-.post_data p,
-.entry_post .post_data {
-    background: transparent !important;
-}
-.easys_content,
-.b_01, .b_02, .z_h1, .z_g1, .z_a1, .z_c1, .h_04, .e_03,
-.entry_post {
-    background: transparent !important;
-}
 
 /* Entry Post */
 .entry_post { margin-bottom: 20px; }

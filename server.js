@@ -14,8 +14,8 @@ const PORT = 3000;
 // JSONボディパーサー
 app.use(express.json({ limit: '10mb' }));
 
-// 静的ファイル配信
-app.use(express.static(__dirname));
+// 静的ファイル配信 (no-cache for development)
+app.use(express.static(__dirname, { setHeaders: (res) => { res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate'); res.setHeader('Pragma', 'no-cache'); } }));
 
 // ============================================
 // API エンドポイント

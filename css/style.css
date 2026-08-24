@@ -81,6 +81,19 @@ body {
     margin-left: auto;
 }
 
+/* ===== Top Info Bar ===== */
+#top-info-bar {
+    display: block;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+    padding: 5px 15px;
+    font-size: 11px;
+    color: #666;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
 /* ===== Branding Box (Desktop header) ===== */
 #branding_box {
     background: #fff;
@@ -95,7 +108,7 @@ body {
     visibility: hidden;
 }
 #header_information {
-    padding: 15px 0 0;
+    padding: 20px 0 0;
 }
 .post-data {
     max-width: 940px;
@@ -135,10 +148,10 @@ body {
 #access a {
     display: block;
     line-height: 42px;
-    padding: 0 15px;
+    padding: 0 20px;
     text-decoration: none;
     color: #0068b7;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     white-space: nowrap;
     border-bottom: 2px solid transparent;
@@ -174,6 +187,7 @@ body {
 
 /* ===== Nav Cards (mobile only) ===== */
 #mobile-nav-cards {
+    display: none;
     max-width: 940px;
     margin: 0 auto;
     padding: 20px 15px;
@@ -335,14 +349,15 @@ body {
 
 
 /* Content text - no background */
-.post_data {
-    background: transparent;
+.post_data,
+.post_data p,
+.entry_post .post_data {
+    background: transparent !important;
 }
-.easys_content {
-    background: transparent;
-}
-.b_01, .b_02, .z_h1, .z_g1, .z_a1, .z_c1, .h_04, .e_03 {
-    background: transparent;
+.easys_content,
+.b_01, .b_02, .z_h1, .z_g1, .z_a1, .z_c1, .h_04, .e_03,
+.entry_post {
+    background: transparent !important;
 }
 
 /* Entry Post */
@@ -450,6 +465,10 @@ a:hover { color: #005299; }
 
 /* ===== Responsive - Tablet ===== */
 @media (max-width: 960px) {
+    /* Hide top info bar on tablet */
+    #top-info-bar {
+        display: none;
+    }
     .post-data {
         flex-direction: column;
         align-items: center;
@@ -488,6 +507,10 @@ a:hover { color: #005299; }
     /* Show mobile header, hide desktop header */
     #mobile-header {
         display: block;
+    }
+    /* Hide top info bar on mobile */
+    #top-info-bar {
+        display: none;
     }
     #branding_box {
         padding-top: 55px;

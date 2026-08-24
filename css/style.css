@@ -234,29 +234,23 @@ body {
     max-width: 940px;
     margin: 0 auto;
     padding: 0 15px;
-    overflow: hidden;
 }
 #main {
-    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
 }
 
 /* Sidebar */
 #secondary {
     width: 200px;
-    float: left;
+    flex-shrink: 0;
     padding: 0 15px;
 }
-#secondary.fixed {
-    position: fixed;
-    top: 60px;
-    z-index: 9998;
-}
-#secondary.fix_under {
-    position: absolute;
-}
 .sidebar-box {
-    float: left;
     width: 220px;
+    position: sticky;
+    top: 20px;
 }
 .widget-title {
     background: #0068b7;
@@ -283,8 +277,8 @@ body {
 
 /* Content */
 #container_top {
-    float: right;
-    width: 680px;
+    flex: 1;
+    min-width: 0;
 }
 #content {
     padding: 0 10px;
@@ -485,6 +479,12 @@ a:hover { color: #005299; }
     #content {
         width: 100%;
         float: none;
+    }
+    #main {
+        display: block;
+    }
+    .sidebar-box {
+        position: static;
     }
     #footer_box {
         width: 100%;

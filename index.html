@@ -287,26 +287,7 @@ jQuery(function($) {
             header.removeClass('fixed');
         }
     });
-    
-    // Fixed sidebar
-    if(nav.length) {
-        var navOffset = 0;
-        $(window).on('load resize', function(){ navOffset = nav.offset(); });
-        $(window).scroll(function() {
-            nav.removeClass('fixed');
-            nav.removeClass('fix_under');
-            var underLimit = $('html').height() - ($('#footer_block').height() + nav.height() + 30);
-            if($('#content').height() > $('.sidebar-box').height()){
-                if( $(window).scrollTop() >= underLimit - 100 ){
-                    nav.addClass('fix_under');
-                    nav.css({'top': underLimit});
-                } else if($(window).scrollTop() > navOffset.top - 100 ) {
-                    nav.addClass('fixed');
-                    nav.css({'top': '60px'});
-                }
-            }
-        });
-    }
+    // Sidebar sticky handled by CSS position: sticky
 });
 </script>
 <script type="text/javascript">

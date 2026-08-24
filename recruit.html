@@ -25,8 +25,9 @@
 <script type='text/javascript' src='js/modal.js'></script>
 <script type='text/javascript' src='js/ajaxzip2.js'></script>
 <style>
-/* PC: remove blue background from content, keep title bars blue */
+/* PC: recruit page layout matching original HP */
 @media (min-width: 601px) {
+    /* Remove blue background from content areas */
     #content { background-color: white !important; }
     #content .b_01,
     #content .easys_content,
@@ -38,7 +39,37 @@
         background-color: transparent !important;
         background-image: none !important;
     }
+    /* Title bar: gray background with blue left border */
     #content .entry_title {
+        background-color: #f0f0f0 !important;
+        background-image: none !important;
+        color: #333 !important;
+        border-left: 5px solid #0068b7 !important;
+        padding: 12px 15px !important;
+        font-size: 18px !important;
+        margin-bottom: 15px !important;
+    }
+    /* Image + text side-by-side layout */
+    #content .entry_post {
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #content .img_box {
+        width: 280px;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+    #content .img_box img {
+        width: 100%;
+        height: auto;
+    }
+    #content .post_data {
+        overflow: hidden;
+        color: #333 !important;
+        line-height: 1.8;
+    }
+    #content .widget-title {
         background-color: #0068b7 !important;
         color: #fff !important;
     }
